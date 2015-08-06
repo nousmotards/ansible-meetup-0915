@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Nousmotards - Ansible Meetup</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Pierre Mavro">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+		<link rel="stylesheet" href="css/theme/nousmotards.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Ansible Meetup</h1>
+					<h4>Automation to infinity and beyond!</h4>
+          <img src="images/logo_ansible.png" height="180"/>
+          <img src="images/logo_nm.png" height="180"/><br />
+					<p>
+						<small><a href="http://www.deimos.fr">Pierre Mavro</a> / <a href="http://twitter.com/deimosfr">@deimosfr</a></small>
+					</p>
+					<aside class="notes">
+            Des motards dans la salle ?
+					</aside>
+				</section>
+
+				<section>
+					<h2>About the Speaker</h2>
+          <h4><a href="https://fr.linkedin.com/in/pmavro">Pierre Mavro / @Deimosfr</a></h4>
+					<ul>
+            <li><a href="https://www.nousmotards.com">Nousmotards</a> Co-Founder</li>
+            <li>DevOps at <a href="http://www.criteo.com">Criteo</a></li>
+            <li>Worked for <a href="http://www.redhat.com">RedHat</a> and <a href="http://www.ullink.com/">Ullink</a></li>
+            <li>Wrote <a href="https://www.packtpub.com/application-development/mariadb-high-performance">MariaDB High Performance Book</a></li>
+            <li>Tech <a href="https://blog.deimos.fr">blog</a> and <a href="https://wiki.deimos.fr">wiki</a> (www.deimos.fr)</li>
+            <li>Motorcycle enthusiast</li>
+            <li>Automation and NoSQL lover</li>
+					</ul>
+          <p>
+            <img src="images/logo_nm.png" height="150"/>
+            <img src="images/1601OS_MariaDB_High_Performance_Frontcover.png" height="150"/>
+            <img src="images/z1000.jpg" height="150"/>
+          </p>
+					<aside class="notes">
+            Fin: 1:30
+					</aside>
+				</section>
+
+				<section>
+					<h2>About Nousmotards</h2>
+					<p>
+          <a href="https://www.nousmotards.com">Nousmotards</a> is a social network for bikers made by bikers:
+					<ul>
+            <li>Manage events</li>
+            <li>Create road books</li>
+            <li>Easily meet new friends</li>
+            <li>...</li>
+          </ul><br />
+          <img src="images/riding.gif" height="250"/><br />
+					</p>
+				</section>
+
+				<section>
+					<h2>Nousmotards Android Demo</h2>
+					<p>
+          <iframe data-autoplay width="310" height="550" src="https://www.youtube.com/embed/oz-zBuI0Mj4" frameborder="0" allowfullscreen></iframe>
+					</p>
+					<aside class="notes">
+            Fin: 6:30
+					</aside>
+				</section>
+
+				<section>
+					<h2>About Founders</h2>
+					<p>
+          <img src="images/trois_boloss.png" height="300"/><br />
+          3 friends with the same passion
+					</p>
+				</section>
+
+        <section data-markdown data-separator="---">
+          <script type="text/template">
+            ## Some sexy technos we're using
+            ![](images/sexy_rider.gif)
+            ---
+            ## Some used apps
+            * ElasticSearch
+            * RabbitMQ
+            * Neo4j
+            * Redis
+            * MongoDB
+            * Nginx
+            * Haproxy
+            * ...
+            ---
+            ## Languages and frameworks
+            * Java
+            * Spring Boot
+            * Javascript
+            * AngularJS
+            * Python
+            * Shell scripts
+          </script>
+        </section>
+				
+        <section>
+          <h2>Why did we choose Ansible?</h2>
+					<ul>
+            <li>YAML make it simple and easy to read</li>
+            <li>Fast to write and execute</li>
+            <li>Agentless</li>
+            <li>Tons of available community plugins and role</li>
+            <li>Written in Python</li>
+            <li>Because that just ROX !!!</li>
+          </ul>
+          <img src="images/rox.gif" height="250"/>
+					<aside class="notes">
+            Fin: 9:00<br />
+            1. lisibilité du code<br />
+            2. ~4x + rapide que chef/puppet à écrire<br />
+            4. GitHub et Galaxy<br />
+            5. python mechanismes dans ansible et Jinja<br />
+					</aside>
+				</section>
+
+				<section>
+					<h2>Nousmotards</h2>
+          <img src="images/arch_overiview.gif" height="250"/>
+					<h2>Architecture overview</h2>
+				</section>
+
+        <section>
+          <img src="images/infra.png" height="650"/>
+					<aside class="notes">
+            Fin: 11:30<br />
+            - Expliquer les grandes lignes de comment ça marche<br />
+					</aside>
+				</section>
+
+				<section>
+          <h2>Deep dive</h2>
+          <img src="images/deep_dive.jpg" height="250"/>
+          <h2>Architecture</h2>
+				</section>
+
+        <section>
+          <h2>Docker</h2>
+					<ul>
+            <li>What is Docker?</li>
+            <li>Simple to install (repo + packages)</li>
+            <li>Store images in a Docker registry (public/private)</li>
+            <li>Container versionning</li>
+            <li>Uses some LXC internals</li>
+            <li>Easy to use</li>
+            <li>Stable enough for small production</li>
+          </ul>
+					<aside class="notes">
+            Fin: 13:30<br />
+            1. maj<br />
+            2. cloud / private repo (+s3)<br />
+            3. commit + support builtin des versions/tag<br />
+            4. LXC caps (capabilities)<br />
+            5. courbe d'apprentisage rapide<br />
+            6. testé depuis la 1.3.3<br />
+					</aside>
+        </section>
+
+        <section>
+          <h2>Packer</h2>
+					<ul>
+            <li>What is Packer?</li>
+            <li>Define source image</li>
+            <li>Pre scripts (ansible dependencies)</li>
+            <li>Run Ansible playbook</li>
+            <li>Post scripts (clean)</li>
+            <li>Export in wished format</li>
+            <li>Push to your Docker registry</li>
+          </ul>
+          </script>
+					<aside class="notes">
+            Fin: 15:00<br />
+            Packer c'est quoi ? (Json )<br />
+            1. debian jessie docker officiel<br />
+            2. dep ansible + besoins nm<br />
+            3. exec: site.yml<br />
+            4. clean packages etc...<br />
+            5. docker export<br />
+					</aside>
+        </section>
+
+        <section>
+          <h2>Ansible</h2>
+					<ul>
+            <li>Store everything on Git</li>
+            <li>Avoid repetition (with_*)</li>
+            <li>Set multiple envs</li>
+            <li>Use vars at max</li>
+            <li>Use facts at max</li>
+            <li>Fail fast</li>
+            <li>Community: Ansible Galaxy</li>
+          </ul>
+          </script>
+					<aside class="notes">
+            Fin: 17:30<br />
+            1. versionning is the key<br />
+            2. with_items, with_glob, with_dict, with_fileglob<br />
+            3. group_vars<br />
+            4. ne pas lésiner et utiliser les défaults<br />
+            5. ne pas essayer de faire un truc de ouf du 1er coup..tester..améliorer<br />
+            6. reverser, utiliser, améliorer
+					</aside>
+        </section>
+
+				<section>
+					<h2>Smarter is better</h2>
+          <img src="images/functionnal_tests.gif" height="300"/>
+				</section>
+
+        <section>
+          <h2>Git</h2>
+					<ul>
+            <li>Keep / trace all updates from Ansible changes</li>
+            <li>Use hooks for sanity checks</li>
+          </ul>
+          </script>
+					<aside class="notes">
+            1. ansible dans git<br />
+            1. check de syntaxe<br />
+					</aside>
+        </section>
+
+        <section>
+          <h2>Jenkins</h2>
+          <h4>Build apps with Docker<br />and publish to private repo</h4>
+          <img src="images/jenkins_app.png" height="130"/>
+          </script>
+					<aside class="notes">
+            Fin: 19:00<br />
+            1. Git pull -> Dockerfile<br />
+            2. Build java / angular avec dependances -> jar ou zip au finish<br />
+            3. versionning des containers<br />
+					</aside>
+        </section>
+
+        <section>
+          <h2>Jenkins</h2>
+          <h4>Build containers with Packer and Ansible<br />Then publish to registry</h4>
+          <img src="images/jenkins_docker.png" height="300"/>
+          </script>
+					<aside class="notes">
+            Fin: 19:30<br />
+            1. Packer utilise Docker debian<br />
+            2. Install des dependances<br />
+            3. Déroule Ansible<br />
+            4. Récupère les app Nousmotards<br />
+            5. Fait l'image et push registry<br />
+					</aside>
+        </section>
+
+        <section>
+          <h2>Deploy: Git + Jenkins</h2>
+					<ul>
+            <li>Git hooks and Jenkins's API</li>
+            <li>Define tag triggers within the team</li>
+          </ul>
+          </script>
+					<aside class="notes">
+            1. git utilise l'api jenkins pour déployer<br />
+            2. tags -prod -preprod...<br />
+					</aside>
+        </section>
+
+        <section>
+          <h2>Jenkins</h2>
+          <h4>Deploy new containers with Ansible</h4>
+          <img src="images/jenkins_deploy.png" height="300"/>
+          </script>
+					<aside class="notes">
+            Fin: 21:00
+					</aside>
+        </section>
+
+				<section>
+          <h2>Harder, better,</h2> 
+          <img src="images/harder.gif" height="300"/>
+          <h2>faster, stronger</h2>
+				</section>
+
+        <section>
+          <h2>Consul</h2>
+					<ul>
+            <li>What is Consul?</li>
+            <li>Why using Consul?</li>
+            <li>Ansible deploy the servers</li>
+            <li>Ansible deploy the agents on containers</li>
+            <li>Register/unregister DNS entry with container start/stop</li>
+            <li>Use consul_io.py for Ansible inventory</li>
+          </ul>
+          </script>
+					<aside class="notes">
+            1. ansible deploie les serveurs<br />
+            2. ansible deploie les agents dans les containers<br />
+            3. consul ajoute/supprime les entrées DNS déployées via ansible<br />
+					</aside>
+					<aside class="notes">
+            Fin: 24:30
+					</aside>
+        </section>
+
+        <section>
+          <h2>Consul Template</h2>
+					<ul>
+            <li>Why is this needed?</li>
+            <li>Choose a Load Balancer (like Haproxy)</li>
+            <li>Use consul-template from Ansible Galaxy</li>
+            <li>Configure Consul template for Haproxy</li>
+            <li>Run it to get HAProxy updated with consul changes</li>
+          </ul>
+          </script>
+					<aside class="notes">
+            2. Haproxy est standart<br />
+            2. Exemple de config avec le role<br />
+            3. A chaque changement c'est à jour<br />
+					</aside>
+					<aside class="notes">
+            Fin: 26:00
+					</aside>
+        </section>
+
+				<section>
+          <h2>Now it's OK!</h2>
+          <img src="images/now_ok.gif" height="300"/>
+          <h2>Let's summarize it</h2>
+				</section>
+
+        <section>
+          <h2>Ansible is everywhere!!!</h2>
+					<ul>
+            <li>To build physical servers</li>
+            <li>To build containers</li>
+            <li>To deploy containers</li>
+            <li>Integrated with Git and Jenkins</li>
+          </ul>
+          </script>
+        </section>
+
+        <section>
+          <h2>Ansible contributions</h2>
+					<ul>
+            <li>Ansible Consul inventory</li>
+            <li>Roles we're sharing:</li>
+					<ul>
+            <li>consul-template</li>
+            <li>elasticsearch</li>
+            <li>graphite</li>
+            <li>mariadb</li>
+            <li>neo4j</li>
+            <li>packer</li>
+          </ul>
+          </ul>
+          <br /><br /><small><a href="https://galaxy.ansible.com/list#/users/3601">https://galaxy.ansible.com/list#/users/3601</a></small>
+          </script>
+        </section>
+
+        <section>
+          <h2>What's next?</h2>
+					<ul>
+            <li>Waiting for Ansible v2</li>
+            <li>Making functionnal tests with Ansible</li>
+          </ul>
+          <img src="images/smarter.gif" height="400"/>
+          </script>
+        </section>
+
+        <section>
+					<h2>Join us!</h2>
+            <img src="images/join_us.jpg" height="300"/>
+					<p>
+					<a href="https://www.nousmotards.com">www.nousmotards.com</a>
+					</p>
+				</section>
+
+				<section>
+					<h1>Ansible Meetup</h1>
+          <h4><a href="https://www.nousmotards.com">www.nousmotards.com</a></h4>
+          <img src="images/logo_ansible.png" height="180"/>
+          <img src="images/logo_nm.png" height="180"/><br />
+					<p>
+          <small><a href="http://www.deimos.fr">Pierre Mavro</a> / <a href="http://twitter.com/deimosfr">@deimosfr</a></small><br />
+          <small>Watch again: <a href="http://nousmotards.github.io/ansible-meetup-0915">http://nousmotards.github.io/ansible-meetup-0915</a></small>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
